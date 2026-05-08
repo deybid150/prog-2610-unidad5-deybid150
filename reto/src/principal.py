@@ -1,0 +1,17 @@
+import codigo_texto as t
+e = True
+while e == True:
+    print("1) Explorar directorio\n2) Procesar Bitácoras / Textos Reales (.txt)\n3) Analizar Dataset de Datos Abiertos (.csv)\n4) Salir del programa")
+    O = int(input("ingresa una opcion numericamente: "))
+    match O:
+        case 1:
+            pass
+        case 2:
+            pass
+        case 3:
+            pass
+        case 4:
+            print("saliendo del programa...")
+            e = False
+        case _:
+            print("ingrese un valor correcto")

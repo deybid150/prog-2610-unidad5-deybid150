@@ -13,4 +13,3 @@ Cuando trabaje en una tabla, haga clic donde desee agregar una fila o columna y,
 La lectura es más fácil, también, en la nueva vista de lectura. 
 Puede contraer partes del documento y centrarse en el texto que desee. 
 Si necesita detener la lectura antes de llegar al final, Word le recordará dónde dejó la lectura, incluso en otros dispositivos.
-

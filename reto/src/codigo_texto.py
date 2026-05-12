@@ -1,10 +1,20 @@
 
 
 def Resumen_Estadístico_del_Texto(archivo):
+    contenido = archivo.read()
+    texto = contenido.lower()
     lineas = archivo.readlines()
     c_lineas = len(lineas)
-    print(c_lineas)
-
+    palabras = texto.split()
+    c_palabras = len(palabras)
+    signos = ".,;:!?¡¿"
+    for signo in signos:
+        texto = archivo.replace(signo, " ")
+    frecuencias = {}
+    for palabra in palabras:
+        
+    
+    print(f"la cantidad de lineas es {c_lineas}\nLa cantidad de palabras es {c_palabras}\n")
 
 
 def archivos_de_texto():
@@ -18,7 +28,7 @@ def archivos_de_texto():
                 t = int(input("elige una opcion numerica: "))
                 match t:
                     case 1:
-                        pass
+                        Resumen_Estadístico_del_Texto(archivo)
                     case 2:
                         pass
                     case 3:

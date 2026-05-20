@@ -48,6 +48,7 @@ def calculo_estadisticas(archivo):
     print("Mínimo:", min(numeros)) 
 
 def grafico_pastel(archivo):
+    archivo.seek(0)
     lector = csv.DictReader(archivo)
     columnas = lector.fieldnames
     Ncol = len(columnas)

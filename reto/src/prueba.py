@@ -1,14 +1,22 @@
 import csv
-import matplotlib as plt
-with open("C:\\Users\\B09S202est\\Documents\\Programacion deybid2026\\prog-2610-unidad5-deybid150\\archivos.csv\\AEROPUERTOS_DE_OPERACIÓN_AEROLINEA_SATENA_20260429.csv", "r", encoding="utf-8") as archivo:
-   lector = csv.DictReader(archivo)
-   columnas = lector.fieldnames
-   Ncol = len(columnas)
-   print("columnas disponibles")
-   i = 0
-   for i in range(Ncol) :
-      print(f"{i}) {columnas[i]}")
-      i += 1
-   seleccion = input("ingrese el nombre de la columna a analizar\n(asegurate de escribirlo bien): ")
-   for nombre in lector[seleccion]:
-      pass
+import matplotlib.pyplot as plt
+with open("archivos.csv\\AEROPUERTOS_DE_OPERACIÓN_AEROLINEA_SATENA_20260429.csv", "r", encoding="utf-8") as archivo:
+   x = []
+   y = []
+   lector = csv.reader(archivo)
+   encabezados = next(lector)
+   print("\nColumnas disponibles:")
+   for i, col in enumerate(encabezados): 
+      print(i, "-", col) 
+   columna_x = encabezados[int(input("Seleccione columna X: "))]
+   columna_y = encabezados[int(input("Seleccione columna Y numérica: "))]
+   indice_x = encabezados.index(columna_x)
+   indice_y = encabezados.index(columna_y)
+   for fila in lector:
+      x.append(fila[indice_x])
+      y.append(float(fila[indice_y]))
+   plt.scatter (x,y)
+   plt.title("Correlación de Variables:")
+   plt.xlabel(columna_x)
+   plt.ylabel(columna_y)
+   plt.show()

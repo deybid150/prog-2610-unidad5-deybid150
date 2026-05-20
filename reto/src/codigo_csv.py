@@ -3,8 +3,6 @@ import statistics # Librería para cálculos estadísticos
 import matplotlib.pyplot as plt # Librería para gráficos
 import pathlib as pt
 
-from reto.src.prueba import Ncol
-
 # VISTA PREVIA DE DATOS
 def vista_previa_de_datos(archivo): # Función para mostrar primeras y últimas filas
     archivo.seek(0) # Regresa al inicio del archivo
